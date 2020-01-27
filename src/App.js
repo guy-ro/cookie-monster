@@ -130,6 +130,7 @@ class App extends Component {
         <ApplicationComponent
           //Passing the applications as a prop
           applications={this.props.applications.applications}
+          history={history}
           //add common props here
         />
       );
@@ -176,7 +177,6 @@ class App extends Component {
           </ConnectedRouter>
           </AuthProvider>
           <Footer getQuestionsAPI={this.getQuestionsAPI}/>
-
           </header>
         </div>
       </ThemeProvider>

@@ -2,8 +2,6 @@ import React, { useCallback, useContext, useState } from "react";
 import { withRouter, Redirect } from "react-router";
 import firebaseApp from "./firebase.js";
 import { AuthContext } from "./Auth.js";
-import { connect } from "react-redux";
-import { push } from "connected-react-router";
 
 
 import Card from '@material-ui/core/Card';
@@ -92,7 +90,8 @@ const Login = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    push(`/applications`)
+    return <Redirect to="/applications" />;
+    //push(`/applications`)
   }
 
   function validateForm() {
