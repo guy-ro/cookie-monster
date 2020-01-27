@@ -6,9 +6,11 @@ import Header2 from "../Components/Header/Header2";
 
 const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
   const {currentUser} = useContext(AuthContext);
+  console.log(currentUser)
+  console.log(!!currentUser)
   return (
 
-    currentUser ? (
+    !!currentUser ? (
         <>
         <Navigation/>
         <Header2/>

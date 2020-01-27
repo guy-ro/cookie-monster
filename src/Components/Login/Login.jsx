@@ -11,6 +11,8 @@ import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import CardActions from '@material-ui/core/CardActions';
+import { connect } from "react-redux";
+import { push } from "connected-react-router";
 
 const CommentForm = styled.form`
   .textFields {
@@ -54,7 +56,7 @@ export default function Login({login, logout, isAuthenticated}) {
 
   const errorEmailMessage = "Couldn't find your account";
   const errorPasswordMessage = "Wrong password. Try again or click Forgot password";
-  
+
   const [values, setValues] = useState({
     email: '',
     password: '',

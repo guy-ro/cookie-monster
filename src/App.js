@@ -28,11 +28,13 @@ import PrivateRoute from "./Authentication/PrivateRoute";
 
 //Use this later for prod vs dev environment
 //// TODO: Uncomment when express is setup
+/*
 const proxy =
   process.env.NODE_ENV === "production"
     ? process.env.REACT_APP_SERVER
     : "http://localhost:4000";
-//const proxy = "http://localhost:4000";
+    */
+const proxy = "https://gregmaxin.com";
 
 //Are we using this?
 const browserHistory = createBrowserHistory();
